@@ -2,10 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgr"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:background="@drawable/bgr"
     tools:context=".PlayActivity" >
 
     <Button
@@ -16,8 +16,8 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/blue_bg"
         android:drawableBottom="@drawable/xiaohou"
-        android:textColor="#000000"
-        android:text="答案2" />
+        android:text="答案2"
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/button1"
@@ -30,11 +30,8 @@
         android:background="@drawable/blue_bg"
         android:drawableBottom="@drawable/xiaohou"
         android:text="答案1"
-        android:textColor="#000000" />/>
-
-    
-
-    
+        android:textColor="#000000" />
+/>
 
     <Button
         android:id="@+id/button3"
@@ -88,5 +85,16 @@
         android:text="式子"
         android:textColor="#000000"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/voice_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignTop="@+id/textView1"
+        android:layout_toRightOf="@+id/imageView1"
+        android:background="@drawable/voice"
+        android:minHeight="20dip"
+        android:minWidth="20dip" />
 
 </RelativeLayout>

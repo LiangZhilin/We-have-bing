@@ -9,14 +9,15 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="460dp"
-        android:layout_height="129dp"
-        android:layout_alignParentLeft="true"
+        android:layout_width="470dp"
+        android:layout_height="125dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="25dp"
         android:layout_x="2dp"
         android:layout_y="10dp"
+        android:paddingBottom="15dp"
         android:src="@drawable/pblurtitle" />
 
     <com.example.mathsapp.MyGifView
@@ -24,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/button1"
         android:src="@drawable/tuzi"
         gif:isgifimage="false" />
@@ -35,8 +36,16 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
-        
-        android:onClick="Start"
-        android:background="@drawable/start" />
+        android:background="@drawable/start"
+        android:onClick="Start" />
+
+    <Button
+        android:id="@+id/voice_control_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_toRightOf="@+id/imageView1"
+        android:background="@drawable/voice" />
 
 </RelativeLayout>

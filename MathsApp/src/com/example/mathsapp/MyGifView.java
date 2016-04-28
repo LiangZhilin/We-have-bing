@@ -1,6 +1,5 @@
 package com.example.mathsapp;
 
-import android.R.animator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -14,30 +13,25 @@ public class MyGifView extends ImageView {
 	private Movie movie;
 	boolean isGifImage;
 
-	public MyGifView(Context context, AttributeSet attrs) {
+	public MyGifView(Context context, AttributeSet attrs) 
+	{
 		super(context, attrs);
 		// 获取自定义属性isgifimage
-		TypedArray array = context.obtainStyledAttributes(attrs,
-				R.styleable.GifView);
+		TypedArray array = context.obtainStyledAttributes(attrs,R.styleable.GifView);
 		isGifImage = array.getBoolean(R.styleable.GifView_isgifimage, true);
-
 		array.recycle();// 获取自定义属性完毕后需要recycle，不然会对下次获取造成影响
 		// 获取ImageView的默认src属性
-		int image = attrs.getAttributeResourceValue(
-				"http://schemas.android.com/apk/res/android", "src", 0);
-
+		int image = attrs.getAttributeResourceValue("http://schemas.android.com/apk/res/android", "src", 0);
 		movie = Movie.decodeStream(getResources().openRawResource(image));
 	}
 
 	@Override
-	protected void onDraw(Canvas canvas) {
-
-		
-		
-		if (isGifImage) {
+	protected void onDraw(Canvas canvas) 
+	{
+		if (isGifImage) 
+		{
 			DrawGifImage(canvas);
-		}
-		
+		}	
 	}
 
 	private void DrawGifImage(Canvas canvas)
@@ -50,8 +44,7 @@ public class MyGifView extends ImageView {
 		}
 			if(movie!=null)
 			{
-				int duration =movie.duration();//获取gif持续的时间
-				
+				int duration =movie.duration();//获取gif持续的时间			
 				if(duration!=0)
 				{
 					int relTime=(int)((nowTime-movieState)%duration);
@@ -59,9 +52,7 @@ public class MyGifView extends ImageView {
 					movie.draw(canvas, 0, 0);
 					invalidate();
 				}
-				
-			}
-		
+			}	
 	}
 /*	@Override
 	protected void onDraw(Canvas canvas) {
